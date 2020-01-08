@@ -11,11 +11,11 @@ describe('PangramFinder', function () {
     const pangramFinder = new PangramFinder('this is not a pangram so the result should be false');
     assert.strictEqual(pangramFinder.isPangram(), false);
   });
-  //
-  // it('should be able to detect a pangram with mixed case', function () {
-  //   const pangramFinder = new PangramFinder('The FIVE boxinG WiZaRdS JUMP quickly');
-  //   assert.strictEqual(pangramFinder.isPangram(), true);
-  // });
+
+  it('should be able to detect a pangram with mixed case', function () {
+    const pangramFinder = new PangramFinder('The FIVE boxinG WiZaRdS JUMP quickly');
+    assert.strictEqual(pangramFinder.isPangram(), true);
+  });
   //
   // it('should be able to detect a non-pangram with mixed case', function () {
   //   const pangramFinder = new PangramFinder('AGaIn ThIs Is NOt a PanGram as It DOeS NoT COnTaIn aLL the LetTerS oF THE ALPhaBet');
