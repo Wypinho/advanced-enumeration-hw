@@ -26,14 +26,14 @@ describe('PangramFinder', function () {
     const pangramFinder = new PangramFinder('how_vexingly_quick_daft_zebras_jump!');
     assert.strictEqual(pangramFinder.isPangram(), true);
   });
-  
+
   it('should be able to detect a non-pangram with special characters', function () {
     const pangramFinder = new PangramFinder('look_just_clear_this_up:_is_this_a_pangram_or_not?!');
     assert.strictEqual(pangramFinder.isPangram(), false);
   });
-  //
-  // it('should be able to handle an empty string', function () {
-  //   const pangramFinder = new PangramFinder('');
-  //   assert.strictEqual(pangramFinder.isPangram(), false);
-  // });
+  
+  it('should be able to handle an empty string', function () {
+    const pangramFinder = new PangramFinder('');
+    assert.strictEqual(pangramFinder.isPangram(), false);
+  });
 });
