@@ -16,16 +16,16 @@ describe('AnagramFinder', function () {
     const anagramFinder = new AnagramFinder('good');
     assert.deepStrictEqual(anagramFinder.findAnagrams(['dog']), []);
   });
-  //
-  // it('should not detect words with too many letters as an anagram', function () {
-  //   const anagramFinder = new AnagramFinder('dog');
-  //   assert.deepStrictEqual(anagramFinder.findAnagrams(['good']), []);
-  // });
-  //
-  // it('should detect an anagram regardless of case', function () {
-  //   const anagramFinder = new AnagramFinder('DeduCTionS');
-  //   assert.deepStrictEqual(anagramFinder.findAnagrams(['DiscOUnteD']), ['DiscOUnteD']);
-  // });
+
+  it('should not detect words with too many letters as an anagram', function () {
+    const anagramFinder = new AnagramFinder('dog');
+    assert.deepStrictEqual(anagramFinder.findAnagrams(['good']), []);
+  });
+  
+  it('should detect an anagram regardless of case', function () {
+    const anagramFinder = new AnagramFinder('DeduCTionS');
+    assert.deepStrictEqual(anagramFinder.findAnagrams(['DiscOUnteD']), ['DiscOUnteD']);
+  });
   //
   // it('should not detect a word as it\'s own anagram', function () {
   //   const anagramFinder = new AnagramFinder('javascript');
