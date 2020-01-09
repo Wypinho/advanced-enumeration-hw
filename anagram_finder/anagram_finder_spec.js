@@ -7,15 +7,15 @@ describe('AnagramFinder', function () {
     assert.deepStrictEqual(anagramFinder.findAnagrams(['cat', 'dog']), ['cat']);
   });
 
-  // it('should be able to detect a non-anagram', function () {
-  //   const anagramFinder = new AnagramFinder('potato');
-  //   assert.deepStrictEqual(anagramFinder.findAnagrams(['tomato']), []);
-  // })
-  //
-  // it('should not detect words with too few letters as an anagram', function () {
-  //   const anagramFinder = new AnagramFinder('good');
-  //   assert.deepStrictEqual(anagramFinder.findAnagrams(['dog']), []);
-  // });
+  it('should be able to detect a non-anagram', function () {
+    const anagramFinder = new AnagramFinder('potato');
+    assert.deepStrictEqual(anagramFinder.findAnagrams(['tomato']), []);
+  })
+
+  it('should not detect words with too few letters as an anagram', function () {
+    const anagramFinder = new AnagramFinder('good');
+    assert.deepStrictEqual(anagramFinder.findAnagrams(['dog']), []);
+  });
   //
   // it('should not detect words with too many letters as an anagram', function () {
   //   const anagramFinder = new AnagramFinder('dog');
