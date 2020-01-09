@@ -3,13 +3,14 @@ const AnagramFinder = function (word) {
 }
 
 AnagramFinder.prototype.findAnagrams = function (otherWords) {
-  let isAnagram = false
-  const anagrams = []
+  let isAnagram = false;
+  const anagrams = [];
   otherWordsSplit = otherWords.map(word => word.split(''));
   otherWordsSplit.filter((word) => {
     if (word.every(letter => this.word.includes(letter))) {
       joinedWord = word.join('');
-      anagrams.push(joinedWord);
+      if (word.length === this.word.length)
+        anagrams.push(joinedWord);
     }
   });
   return anagrams
